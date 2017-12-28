@@ -13,6 +13,7 @@
 >5.	經過查詢後，我們發現原始資料中，登船地點的「S」、「C」與「Q」分別代表著「Southampton」、「Cherbourg」、「Queenstown」。數值化的方法為按照鐵達尼號當時行駛的順序來制定，其中「Southampton=1，Cherbourg=2，Queenstown=3」。  
 >6.	救生船編號經觀察後，發現若是搭乘數字編號的救生艇，艇上人員基本上都有存活，但是若救生艇編號為英文字母的話，則不一定存活，所以我們數值化的方法為定「救生艇為數字編號=2，救生艇為英文編號=1，沒有搭到救生艇=0」。
 
+>**NET**
 >![image](https://github.com/NTU-CSX-Project/b04202052/blob/master/NET.png)
 
 
