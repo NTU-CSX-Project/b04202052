@@ -18,5 +18,35 @@
 
 
 # LSTM
+>**LSTM Report**  
+>介紹encoder-decorder LSTM。
+
+>**CPU Usage Prediction**  
+>以舊有六台電腦的資料預測每一次CPU使用率的相對高峰，並且將這六台電腦的資料作為樣本，去製作出一個可預測新客戶電腦CPU使用率高峰時間的model。
+>>**EDA**  
+>>1. 這各個項目中，我只取用了CPU使用率與時間，因為我認為這是最直接可以知道一台電腦被使用狀況的數值。  
+>>2. 為了區別不同的電腦，我分別給不同ID的電腦一個數字做代表，附表是電腦代號與ID的對照表。而這個給數字的依據是按照各台電腦CPU使用率突然有落差的次數多寡來給分的，如果落差次數越多，分數越高。  
+>>3. 因為時間只有一小段區間，所以我認為日期並不重要，但是是在一天中的哪一天有usage gap的情況就很重要，所以我也有把時間給納入考量。另外，為了方便計量，我以每天的凌晨12點為基準點，以秒為單位將每組資料的時間做換算。  
+>>4. 我機台出現usage gap時，前後一段時間的CPU使用率可能會反映出一些特徵，所以我也一併把出現usage gap的前後10筆資料一起抓出來。  
+>>5. 最後，我給每秒鐘機台的使用狀況訂了一個表現的分數，而我的model在預測的也是這個分數。這個分數是這樣訂的，他等於標準化後的CPU使用率與兩倍的標準化CPU使用率變化和。  
+>>  
+>>  
+>>電腦代號與ID的對照表
+
+>>|             電腦使用者ID            | 電腦數字代號 |  
+>>|:---------------------------------:|:----------:|  
+>>| b-956223090-UserCluster1-sysadmin |     6      |  
+>>| t-657740490-UserCluster1-sysadmin |     5      |  
+>>| i-325376172-UserCluster1-sysadmin |     4      |  
+>>| c-959255288-UserCluster1-sysadmin |     3      |  
+>>| b-956223090-UserCluster1-sysadmin |     2      |  
+>>| a-957043145-UserCluster1-sysadmin |     1      |
+
+>>**LSTM NET**  
+>>參考資料：  
+>>[1]https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/  
+>>[2]https://goo.gl/NcGzAJ  
+
+# NLP
 
 
