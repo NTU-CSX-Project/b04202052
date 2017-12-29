@@ -48,5 +48,6 @@
 >>[2]https://goo.gl/NcGzAJ  
 
 # NLP
+使用SnowNLP與Jieba判斷歌曲是首開心或不開心的歌，另外同時使用Jieba提取歌詞內的關鍵字句。
 
 
